@@ -1,84 +1,125 @@
-<html>
 <head>
-<style>
-header {
-    background-color:black;
-    color:darkred;
-    text-align:center;
-    padding:5px;	 
-    font-family: Arial, Helvetica, sans-serif;
-}
-nav {
-    line-height:30px;
-    background-color:#eeeeee;
-    height:300px;
-    width:100px;
-    float:left;
-    padding:5px;	      
-}
-section {
-    width:350px;
-    float:left;
-    padding:10px;	 	 
-}
-footer {
-    background-color:black;
-    color:white;
-    clear:both;
-    text-align:center;
-    padding:5px;	 	 
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customize Your Ride</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('https://i.imgur.com/WYrT7Kb.png');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+
+        .title {
+            background-image: url('https://i.imgur.com/qgfsN4l.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 749px; /* Set the width of the title image */
+            height: 53px; /* Set the height of the title image */
+            margin-top: -770px; /* Adjust this value to move the title higher */
+        }
+
+        .table-container {
+            position: absolute;
+            padding: 40px;
+            border-radius: 10px;
+            background: url('https://i.imgur.com/koTNCvU.jpeg');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            width: 50%;
+            text-align: center;
+        }
+        
+        .mini-table-container {
+            position: relative;
+            padding: 40px;
+            border-radius: 10px;
+            background-color: rgb(255, 255, 255);
+            background-size: cover;
+            background-position: center;
+            height: 20px;
+            width: 50%;
+            text-align: center;
+            margin-left: 200px;
+            margin-bottom: 40px;
+        }
+
+        .table-header {
+            font-size: 32px;
+            margin-bottom: 20px;
+            margin-left: 0px;
+            color:rgb(0, 0, 0);
+            
+        }
+
+        .dropdown {
+            width: calc(100% - 30px);
+            padding: 15px;
+            margin-bottom: 10px;
+            border: 1px solid white;
+            border-radius: 5px;
+            background-color: black;
+            color: white;
+        }
+
+        .button {
+            width: calc(100% - 30px);
+            padding: 15px;
+            margin-top: 20px;
+            background-color: #ff6600;
+            color: black;
+            font-size: 18px;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 
 <body>
-<header>
-<h1> Customize Your Ride</h1>
-</header>
+    <div class="title"></div>
+    <div class="table-container">
+		<div class="mini-table-container">
+	        <div class="table-header">Please make a selection:</div>
+	        </div>
+	        
 
-<nav>
-<a href="/webproject-ex-0919-porter/OTHER-URL.html">Under Construction TODO</a> <br>
-</nav>
-
-	<form action="InsertData" method="POST">
-
-<section>
-	<h1>Vehicle Selection</h1>
-	
-	<label for="model-names">Choose a model:</label> 
-    <select name="model-names" id="model-names"> 
-        <option value="i30" selected>i30</option> 
-        <option value="Kona">Kona</option> 
-        <option value="Elantra">Elantra</option> 
-        <option value="Tuscon">Tuscon</option> 
-    </select> <br />
-    
-	<label for="edition-names">Choose an edition:</label> 
-    <select name="edition-names" id="edition-names"> 
-        <option value="Sport"selected>Sport</option> 
-        <option value="Luxury">Luxury</option> 
-        <option value="Basic Plus">Basic Plus</option> 
-        <option value="Basic">Basic</option> 
-    </select> <br />
-    
-    <label for="color-names">Choose an color:</label> 
-    <select name="color-names" id="color-names"> 
-        <option value="Destiny Red"selected>Destiny Red</option> 
-        <option value="Bare Metal Gray">Bare Metal Gray</option> 
-        <option value="Black Amber">Black Amber</option> 
-        <option value="Egg Yolk Yellow">Egg Yolk Yellow</option> 
-        <option value="Pizza Orange">Pizza Orange</option> 
-    </select> <br />
-	
-		
-		
-		<input type="submit" value="Submit" />
-	</form>
-
-</section>
-
-<footer>
-Copywrong
-</footer>
+	        <form action="InsertData" method="POST">
+	            <select class="dropdown" name="model-names" id="model-names" required>
+	                <option value="" disabled selected>Choose a model...</option>
+	                <option value="i30">i30</option>
+	                <option value="Kona">Kona</option>
+	                <option value="Elantra">Elantra</option>
+	                <option value="Tuscon">Tuscon</option>
+	            </select> <br />
+	            <select class="dropdown" name="edition-names" id="edition-names" required>
+	                <option value="" disabled selected>Choose an edition...</option>
+	                <option value="Sport">Sport</option>
+	                <option value="Luxury">Luxury</option>
+	                <option value="Basic Plus">Basic Plus</option>
+	                <option value="Basic">Basic</option>
+	            </select> <br />
+	            <select class="dropdown" name="color-names" id="color-names" required>
+	                <option value="" disabled selected>Choose a color...</option>
+	                <option value="Destiny Red">Destiny Red</option>
+	                <option value="Bare Metal Gray">Bare Metal Gray</option>
+	                <option value="Black Amber">Black Amber</option>
+	                <option value="Egg Yolk Yellow">Egg Yolk Yellow</option>
+	                <option value="Pizza Orange">Pizza Orange</option>
+	            </select> <br />
+	            
+	            
+	            <input type="submit" value="Submit"/>
+	        </form>
+    </div>
 </body>
+
 </html>
